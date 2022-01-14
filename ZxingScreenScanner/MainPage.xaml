@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             x:Class="ZxingScreenScanner.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <zxing:ZXingScannerView x:Name="zxing" 
+                                VerticalOptions="FillAndExpand"/>
+        <zxing:ZXingDefaultOverlay TopText="Hold your phone up to the barcode"
+                                   BottomText="Scanning will happen automatically"/>
+        <Label x:Name="lblResult"
+               Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+    </Grid>
+
+</ContentPage>
